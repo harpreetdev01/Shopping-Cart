@@ -22,7 +22,7 @@ while True:
         if not re.match(r"^[A-Za-z\s]+$", item_name):
             print("Invalid input! Item name cannot contain numbers.")
             continue
-        
+
         break
 
 print(f"You selected: {item_name}")
@@ -48,7 +48,7 @@ total_price = round((sub_total + tax_total), 2)
 print(f"Your item is: {item_name}")
 print(f"Your quantity is: {item_quantity}", end="\n")
 print(f"------------------------------------------------", end="\n")
-print(f"Your item cost is: {item_price}")
-print(f"Subtotal: {sub_total}")
-print(f"Tax is: {tax_total}")
-print(f"Total: {total_price}")
+print(f"Your item cost is: ${item_price}")
+print(f"Subtotal: ${sub_total}")
+print(f"Tax is: ${tax_total}")
+print(f"Total: ${total_price}")
