@@ -9,7 +9,7 @@ import re
 # variables
 item_name = ""
 item_quantity = 0
-item_price = 2.99
+item_price = 9.99
 tax = 0.13
 sub_total = 0
 total_price = 0
@@ -40,15 +40,16 @@ while True:
         break
   
 # calculate the total price for the user's item and quantity
-sub_total = round(item_quantity * item_price, 0)
+sub_total = round(item_quantity * item_price, 2)
 tax_total = round(sub_total * tax, 2)
 total_price = round((sub_total + tax_total), 2)
 
 # print total price to the user
 print(f"Your item is: {item_name}")
 print(f"Your quantity is: {item_quantity}", end="\n")
-print(f"------------------------------------------------", end="\n")
+print("-" * 50)  
 print(f"Your item cost is: ${item_price}")
-print(f"Subtotal: ${sub_total}")
-print(f"Tax is: ${tax_total}")
-print(f"Total: ${total_price}")
+print(f"You have bought: {item_quantity} x {item_name}(s) for ${item_price:.2f} each")
+print(f"Subtotal: ${sub_total:.2f}")
+print(f"Tax is: ${tax_total:.2f}")
+print(f"Total: ${total_price:.2f}")
